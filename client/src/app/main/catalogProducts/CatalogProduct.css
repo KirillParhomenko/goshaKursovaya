@@ -1,0 +1,165 @@
+.catalogProductWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3vw;
+}
+
+.catalogProduct-title p {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 3vw;
+  color: #444444;
+  font-weight: bold;
+  font-size: 2vw;
+  line-height: 1vw;
+}
+
+.catalogProduct-products {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  row-gap: 1vw;
+}
+
+.catalogProduct-element {
+  background-color: #edeae5;
+  border-radius: 15px;
+  width: 95%;
+  height: 25vw;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-rows: 65% 10% 5% 15%;
+}
+
+.catalogProduct-element:hover {
+  cursor: pointer;
+}
+
+.catalogProduct-element-photo {
+  border-radius: 15px;
+  margin-top: 0.3vw;
+  margin-right: 0.3vw;
+  margin-left: 0.3vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.catalogProduct-element-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catalogProduct-element-productName {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.catalogProduct-element-productName p {
+  padding: 0;
+  margin: 0;
+  color: #444444;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 1vw;
+}
+
+.catalogProduct-element-exist {
+  display: flex;
+  align-items: center;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.catalogProduct-element-exist p {
+  padding: 0;
+  margin: 0;
+  line-height: 1vw;
+  font-size: 0.7vw;
+}
+
+.catalogProduct-element-buy {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: flex-end;
+}
+
+.catalogProduct-element-price {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex: 0 0 45%;
+}
+
+.catalogProduct-element-priceValid {
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-weight: 500;
+  font-size: 2vw;
+  line-height: 2vw;
+}
+
+.catalogProduct-element-priceOld {
+  padding: 0;
+  margin: 0;
+  color: #444444;
+  text-decoration: line-through;
+  font-size: 1.4vw;
+  line-height: 2vw;
+  margin-left: 0.4vw;
+}
+
+.catalogProduct-element-buyButtonWrapper {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.catalogProduct-element-butButton {
+  width: 70%;
+  height: 80%;
+  font-size: 1vw;
+  line-height: 1vw;
+  font-weight: 400;
+  color: white;
+  background-color: #b00000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.catalogProduct-element-butButton:hover {
+  box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 50%);
+}
+
+.catalogProduct-element-viewDeeper {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-90%);
+  visibility: hidden;
+  width: 7vw;
+  height: 2.5vw;
+  border-radius: 20px;
+  border: none;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  color: black;
+  font-size: 0.7vw;
+  font-weight: 600;
+}
+
+.catalogProduct-element:hover .catalogProduct-element-viewDeeper {
+  visibility: visible;
+opacity: 1;
+}

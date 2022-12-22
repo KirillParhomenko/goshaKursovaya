@@ -1,0 +1,131 @@
+.burger-btn {
+  display: flex;
+  align-items: center;
+}
+
+.burger-icon-wrapper {
+  display: flex;
+  width: 45px;
+  height: 35px;
+  align-items: center;
+  border-radius: 20%;
+}
+
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 15px;
+  width: 30px;
+  cursor: pointer;
+}
+
+
+.burger-icon span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+}
+
+.burger-shop {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  max-width: 400px;
+  width: calc(100% - 56px);
+  height: 100%;
+  background-color: #fafafa;
+  z-index: 100;
+  transform: translate(-100%);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.burger-shop-active {
+  transform: translate(0%);
+}
+
+.burger-shop-wrapper {
+  overflow: hidden;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.burger-shop-element {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.burger-shop-element p::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 3%;
+  width: 0;
+  height: 1px;
+  background: #444444;
+  transition: width 0.3s;
+}
+
+.burger-shop-element:hover p::after {
+  width: 100%;
+}
+
+.burger-shop-element p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #444444;
+  margin-left: 10px;
+}
+
+.burger-shop-header {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444444;
+  margin-bottom: 20px;
+}
+
+.burger-shop-header_logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.burger-shop-header_logoName {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.5em;
+  color: #444444;
+  padding: 0;
+}
+
+.burger-icon-active :nth-child(1) {
+  position: relative;
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.burger-icon-active :nth-child(2) {
+  visibility: hidden;
+}
+
+.burger-icon-active :nth-child(3) {
+  position: relative;
+  top: -9px;
+  transform: rotate(135deg);
+}
+
+.burger-icon-active {
+  cursor: pointer;
+}

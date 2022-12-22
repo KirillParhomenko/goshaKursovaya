@@ -1,0 +1,21 @@
+.discountsWrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
+}
+
+.discountsTitle {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 0 auto;
+}
+
+.discountsTitle p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1vw;
+  color: #b00000;
+  font-weight: bold;
+  font-size: 2vw;
+  line-height: 2vw;
+}
