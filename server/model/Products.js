@@ -1,3 +1,4 @@
+//Схема таблицы Продукты
 const mongoose = require("mongoose");
 
 const productsSchema = mongoose.Schema({
@@ -25,6 +26,7 @@ const productsSchema = mongoose.Schema({
     type: Number,
     default: 0.0,
   },
+  //Нужно для связывания таблиц
   idInCatalog: {
     ref: "catalogs",
     type: mongoose.Schema.Types.ObjectId,

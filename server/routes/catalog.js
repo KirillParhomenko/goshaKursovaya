@@ -1,10 +1,13 @@
 const express = require("express");
+//Роутер: передача в api
 const router = express.Router();
 
+//Инициализация Схемы 
 const Catalog = require("./../model/Catalog");
 
 //get all type in catalog
 
+//Get Запрос всех данных с каталога
 router.get("/catalog", async (req, res) => {
   try {
     const allCatalogElements = await Catalog.find();
@@ -14,7 +17,7 @@ router.get("/catalog", async (req, res) => {
   }
 });
 
-//save type of catalog
+//Сохранение данных в Каталог
 router.post("/catalog", async (req, res) => {
   const catalog = new Catalog({
     ...req.body,

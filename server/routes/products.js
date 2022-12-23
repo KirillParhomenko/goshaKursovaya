@@ -4,7 +4,7 @@ const router = express.Router();
 const Products = require('./../model/Products');
 
 //get all type in catalog
-
+//Запрос на выдачу всех продуктов
 router.get('/product', async (req, res) => {
     try {
         const allProductElements = await Products.find();
@@ -15,6 +15,7 @@ router.get('/product', async (req, res) => {
 });
 
 //save type of catalog
+//запрос на сохранение продуктов
 router.post('/product', async (req, res) => {
     const product = new Products({
         ...req.body

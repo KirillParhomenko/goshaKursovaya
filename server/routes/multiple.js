@@ -4,6 +4,7 @@ const router = express.Router();
 const Catalog = require("./../model/Catalog");
 const Products = require("./../model/Products");
 
+//Мулти запрос на две таблицы базы данных
 router.get("/main", async (req, res) => {
   try {
     const finalData = await Catalog.aggregate([
@@ -21,7 +22,7 @@ router.get("/main", async (req, res) => {
     res.status(500).json({ message: err });
   }
 });
-
+//Запрос на товары из категории
 router.get("/data/:name", async (req, res) => {
   try {
     const category = await Catalog.findOne({
@@ -36,7 +37,7 @@ router.get("/data/:name", async (req, res) => {
     res.status(500).json({ message: err });
   }
 });
-
+//Запрос на товары со скидкой
 router.get("/discount/:amount", async (req, res) => {
   try {
     const discounts = await Products.aggregate([
@@ -62,7 +63,7 @@ router.get("/discount/:amount", async (req, res) => {
     res.status(500).json({ message: err });
   }
 });
-
+//Поиск по товарам
 router.get("/search/:paramSearch", async (req, res) => {
   try {
     const name = req.params.name.charAt(0).toUpperCase()+req.params.name.slice(1).toLowerCase();
