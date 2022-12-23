@@ -23,16 +23,24 @@ const HotProductInner = ({
       <div className="hotProductInnerElement">
         <div className="hotProductDiscount">
           <div className="hotProductInnerElement-price">
-            <p>{String(data.newPrice).split(".")[0]+'р'}</p>
+            <p>{String(data.newPrice).split(".")[0] + "р"}</p>
           </div>
           <div className="hotProductInnerElement-price">
             <p>{String(data.newPrice).split(".")[1]}</p>
           </div>
         </div>
       </div>
-      <div className="hotProductInnerElement">
-        
-      </div>
+      <div
+        className="hotProductInnerElement"
+        style={{
+          width: "100%",
+          height: "100%",
+          borderRadius: "15px",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundImage: `url(${data.imageSrc})`,
+        }}
+      ></div>
     </div>
   );
 };

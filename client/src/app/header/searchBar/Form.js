@@ -2,10 +2,12 @@ import InnerWrapper from "./InnerWrapper";
 
 import "./SearchBarStyle.css";
 
-const Form = () => {
+const Form = (searchValueHandle, searchValue) => {
   return (
-    <form className='searchForm'>
-      <InnerWrapper />
+    <form
+      className="searchForm"
+    >
+      <InnerWrapper searchfdValueHandle={searchValueHandle} searchValue={searchValue}/>
     </form>
   );
 };

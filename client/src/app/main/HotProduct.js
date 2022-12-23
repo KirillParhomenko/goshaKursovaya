@@ -1,7 +1,5 @@
-import backGroundImg from "./img/backGround.jpg";
-
 const HotProduct = ({ slide, positionStyle, children }) => {
-  const backGroundUrl = slide ? slide.url : backGroundImg;
+  const backGroundUrl = slide ? slide.url : null;
 
   const sliderStyles = {
     display: "flex",

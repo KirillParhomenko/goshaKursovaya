@@ -63,4 +63,16 @@ router.get("/discount/:amount", async (req, res) => {
   }
 });
 
+router.get("/search/:paramSearch", async (req, res) => {
+  try {
+    const name = req.params.name.charAt(0).toUpperCase()+req.params.name.slice(1).toLowerCase();
+    const searchedProducts = await Products.find({
+      'name': name,
+    });
+    res.json(searchedProducts);
+  } catch (err) {
+    res.status(500).json({ message: err });
+  }
+});
+
 module.exports = router;

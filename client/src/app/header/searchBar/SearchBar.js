@@ -1,3 +1,4 @@
+import { useState } from "react";
 import classNames from "classnames";
 
 import Form from "./Form";
@@ -7,6 +8,10 @@ import "./SearchBarStyle.css";
 import "./../menu/HamburgerShopStyle.css";
 
 const SearchBar = ({ isActivate, searchBarToggle }) => {
+  const [searchValue, setSearchValue] = useState("");
+  const searchValueHandle = (queyText) => {
+    setSearchValue(queyText);
+  };
   return (
     <div
       className={classNames("header-searchBarWrapper", {
@@ -21,7 +26,7 @@ const SearchBar = ({ isActivate, searchBarToggle }) => {
         />
       </div>
       <div className="header-searchBar-header">
-        <Form />
+        <Form searchValueHandle={searchValueHandle} searchValue={searchValue} />
       </div>
       <div className="header-searchBar-main"></div>
     </div>
